@@ -25,7 +25,7 @@ class StudentView(LoginRequiredMixin, CreateView):
             return redirect('create_student')
         else:
             f = PersonForm()
-        return render(request, "index.html", {'form': f})
+        return render(request, "index.html", {'form': f}.update(csrf(request)))
 
 def person_list(request):
     person = Person.objects.all()
@@ -38,4 +38,4 @@ def person_list(request):
     except EmptyPage:
         page_obj = p.page(p.num_pages)
 
-    return render(request, 'person_list.html', {'page_obj': page_obj})
+    return render(request, 'person_list.html', {'page_obj': page_obj}.update(csrf(request)))
