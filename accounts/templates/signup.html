@@ -8,8 +8,8 @@
 </head>
 <body>
     <h2>Регистрация</h2>
+    {% csrf_token %}
     <form method="post">
-        {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Зарегистрироваться</button>
     </form>
