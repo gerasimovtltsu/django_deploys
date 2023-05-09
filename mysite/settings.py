@@ -86,8 +86,12 @@ LOGIN_REDIRECT_URL = 'create_student'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'IwFpg63D4T5kC6hJzlNC',
+        'HOST': 'containers-us-west-1.railway.app',
+        'PORT': 7770,
     }
 }
 
