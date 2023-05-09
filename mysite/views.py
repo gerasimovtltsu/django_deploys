@@ -5,8 +5,8 @@ from django.views.generic.edit import CreateView
 
 from django.core.paginator import Paginator
 
-from project.models import Person
-from project.forms import PersonForm
+from mysite.models import Person
+from mysite.forms import PersonForm
 
 class StudentView(LoginRequiredMixin, CreateView):
     model = Person

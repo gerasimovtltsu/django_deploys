@@ -1,6 +1,6 @@
 from django import forms
 
-from project.models import StudentGroup, Person
+from mysite.models import StudentGroup, Person
 
 class PersonForm(forms.ModelForm):
     class Meta:

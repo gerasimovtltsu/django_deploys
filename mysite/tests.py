@@ -1,5 +1,5 @@
 from django.test import TestCase
-from project.models import Person, StudentGroup
+from mysite.models import Person, StudentGroup
 
 class PersonTest(TestCase):
     def setUp(self):
